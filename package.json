@@ -1,0 +1,24 @@
+{
+  "name": "mocha-teamcity-reporer",
+  "version": "0.0.1",
+  "description": "teamcity reporter for mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/travisjeffery/mocha-teamcity-reporter.git"
+  },
+  "keywords": [
+    "mocha",
+    "teamcity",
+    "reporter",
+    "jetbrains"
+  ],
+  "author": "travis jeffery",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/travisjeffery/mocha-teamcity-reporter/issues"
+  }
+}
