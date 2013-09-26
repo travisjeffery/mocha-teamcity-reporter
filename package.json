@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "teamcity reporter for mocha",
   "main": "index.js",
+  "directories": "./lib",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +17,9 @@
     "reporter",
     "jetbrains"
   ],
+  "dependencies": {
+    "mocha": "1.13.0"
+  },
   "author": "travis jeffery",
   "license": "MIT",
   "bugs": {
