@@ -1,5 +1,5 @@
 {
-  "name": "mocha-teamcity-reporer",
+  "name": "mocha-teamcity-reporter",
   "version": "0.0.1",
   "description": "teamcity reporter for mocha",
   "main": "index.js",
