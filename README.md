@@ -5,7 +5,7 @@ Basically, have your project's package.json be like:
 ``` js
 {
   "devDependencies": {
-    "mocha-teamcity-reporter": "0.0.1"
+    "mocha-teamcity-reporter": ">=0.0.1"
   }
 }
 ```
