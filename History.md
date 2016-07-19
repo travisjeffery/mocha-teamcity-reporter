@@ -1,3 +1,8 @@
+1.0.0 / 2016-07-18
+==================
+
+  * Remove escape sequences from reporting
+  * Fix NaN duration
 
 1.0.0 / 2015-09-30
 ==================

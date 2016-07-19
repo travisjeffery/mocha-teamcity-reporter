@@ -1,6 +1,6 @@
 {
   "name": "mocha-teamcity-reporter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "teamcity reporter for mocha",
   "main": "./lib/teamcity.js",
   "directories": "./lib",
