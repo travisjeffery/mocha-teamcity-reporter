@@ -1,4 +1,10 @@
-1.0.0 / 2016-07-18
+
+1.1.0 / 2016-08-24 
+==================
+
+  * Support running in the browser with Mocha without require.js
+
+1.0.1 / 2016-07-18
 ==================
 
   * Remove escape sequences from reporting
