@@ -1,3 +1,9 @@
+2.0.0 / 2016-08-24 
+==================
+* Add FlowId
+* Minimum nodejs engine of 4+
+* Add some eslint magic
+
 
 1.1.0 / 2016-08-24 
 ==================

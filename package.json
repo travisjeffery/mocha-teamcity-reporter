@@ -1,9 +1,14 @@
 {
   "name": "mocha-teamcity-reporter",
-  "version": "1.1.1",
+  "engines": {
+    "node": ">=4"
+  },
+  "version": "2.0.0",
   "description": "teamcity reporter for mocha",
   "main": "./lib/teamcity.js",
-  "directories": "./lib",
+  "directories": {
+    "lib": "./lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,11 +23,20 @@
     "jetbrains"
   ],
   "dependencies": {
-    "mocha": ">=1.13.0"
+    "mocha": ">=3.5.0"
   },
   "author": "travis jeffery",
+  "maintainers": [
+    {
+      "email": "sherriffjamienz@gmail.com",
+      "name": "Jamie Sherrif"
+    }
+    ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/travisjeffery/mocha-teamcity-reporter/issues"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1"
   }
 }
