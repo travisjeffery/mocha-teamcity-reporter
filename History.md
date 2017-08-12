@@ -1,4 +1,4 @@
-2.0.0 / 2016-08-24 
+2.0.0 / 2017-08-24 
 ==================
 * Add FlowId
 * Minimum nodejs engine of 4+
