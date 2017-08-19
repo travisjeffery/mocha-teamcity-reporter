@@ -1,6 +1,14 @@
 [![npm version](https://badge.fury.io/js/mocha-teamcity-reporter.svg)](http://badge.fury.io/js/mocha-teamcity-reporter)
 
-(Note: I'm looking to add someone as a collaborator/maintainer if you're interested let me know.)
+mocha-teamcity-reporter-v2 Teamcity reporter which makes it possible to display test results in real-time, makes test information 
+available on the Tests tab of the Build Results page.
+
+Please note this has been forked from the orginal author https://github.com/travisjeffery/mocha-teamcity-reporter 
+which does not appear to be maintaining or accepting Pull requests.
+
+##Why use this over the orignal
+* Support flowId's
+* other small bug fixes
 
 https://github.com/visionmedia/mocha/wiki/Third-party-reporters describes using third party reporters in mocha.
 
