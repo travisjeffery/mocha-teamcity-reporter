@@ -4,11 +4,11 @@ mocha-teamcity-reporter-v2 Teamcity reporter which makes it possible to display 
 available on the Tests tab of the Build Results page.
 
 Please note this has been forked from the orginal author https://github.com/travisjeffery/mocha-teamcity-reporter 
-which does not appear to be maintaining or accepting Pull requests.
+which does not appear to be maintained or accepting Pull requests. Also note this is not endorsed by the original creator
 
-##Why use this over the orignal
+##Why use this over the original
 * Support flowId's
-* other small bug fixes
+* other small bug fixes (such as skipped tests get a duration)
 
 https://github.com/visionmedia/mocha/wiki/Third-party-reporters describes using third party reporters in mocha.
 
@@ -25,3 +25,7 @@ Basically, have your project's package.json be like:
 Then call mocha with:
 
 `mocha --reporter mocha-teamcity-reporter test`
+
+## Customisation:
+Can set flowId like:  
+`mocha test/test_data --reporter lib\teamcity --reporter-options flowId=gobbledygook`

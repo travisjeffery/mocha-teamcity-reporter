@@ -4,17 +4,17 @@
 var Mocha = require('mocha'),
 	fs = require('fs'),
 	path = require('path');
-
+//https://gist.github.com/pguillory/729616
 // Instantiate a Mocha instance.
 const reporterLocation = path.resolve('..','lib','teamcity.js');
 console.log(reporterLocation)
 let outStream = process.stdout;
 var mocha = new Mocha({
 	reporter: 'lib/teamcity',
-	reporterOptions: {'k1':'v1'}
+	reporterOptions: {flowId:''}
 });
 
-var testDir = path.resolve('test','test_data')
+var testDir = path.resolve('test', 'test_data')
 
 // Add each .js file to the mocha instance
 fs.readdirSync(testDir).filter(function(file){
