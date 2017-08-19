@@ -1,5 +1,5 @@
 {
-  "name": "mocha-teamcity-reporter",
+  "name": "mocha-teamcity-reporter-v2",
   "engines": {
     "node": ">=4"
   },
@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint lib/*.js"
+    "test-teamcity": " mocha test/integration/simple.js --reporter lib/teamcity.js",
+    "lint": "eslint lib/*.js test/**/*.js"
   },
   "repository": {
     "type": "git",
