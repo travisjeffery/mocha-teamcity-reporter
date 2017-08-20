@@ -10,8 +10,8 @@
     "lib": "./lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test-teamcity": " mocha test/integration/simple.js --reporter lib/teamcity.js",
+    "test": "mocha test/integration/",
+    "test-teamcity-example": "mocha test/integration/simple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js"
   },
   "repository": {
