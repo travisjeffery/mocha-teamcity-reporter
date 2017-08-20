@@ -3,7 +3,6 @@ language: node_js
 script:
   - npm run lint
   - npm test
-  - npm run test-teamcity-example
 
 node_js:
   - "node"
