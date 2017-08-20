@@ -9,7 +9,7 @@ available on the Tests tab of the Build Results page.
 Please note this has been forked from the original author https://github.com/travisjeffery/mocha-teamcity-reporter 
 which does not appear to be maintained or accepting Pull requests. Also note this is not endorsed by the original creator
 
-##Why use this over the original
+## Why use this over the original:
 * Support flowId's
 * other small bug fixes
 * Functional tests
