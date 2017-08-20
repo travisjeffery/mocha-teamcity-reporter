@@ -10,13 +10,13 @@
     "lib": "./lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test-teamcity": " mocha test/integration/simple.js --reporter lib/teamcity.js",
+    "test": "mocha test/functional",
+    "test-teamcity-example": "mocha test/test_data/simple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/travisjeffery/mocha-teamcity-reporter.git"
+    "url": "https://github.com/jamie-sherriff/mocha-teamcity-reporter"
   },
   "keywords": [
     "mocha",
@@ -27,16 +27,10 @@
   "dependencies": {
     "mocha": ">=3.5.0"
   },
-  "author": "travis jeffery",
-  "maintainers": [
-    {
-      "email": "sherriffjamienz@gmail.com",
-      "name": "Jamie Sherrif"
-    }
-    ],
+  "author": "Jamie Sherriff",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/travisjeffery/mocha-teamcity-reporter/issues"
+    "url": "https://github.com/jamie-sherriff/mocha-teamcity-reporter/issues"
   },
   "devDependencies": {
     "eslint": "^4.4.1"
