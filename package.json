@@ -10,8 +10,8 @@
     "lib": "./lib"
   },
   "scripts": {
-    "test": "mocha test/integration/",
-    "test-teamcity-example": "mocha test/integration/simple.js --reporter lib/teamcity.js",
+    "test": "mocha test/functional",
+    "test-teamcity-example": "mocha test/test_data/simple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js"
   },
   "repository": {

@@ -7,8 +7,8 @@ const {execFile} = require('child_process');
 const assert = require('assert');
 const os = require('os');
 const path = require('path');
-let internalMochaPath;
 
+let internalMochaPath;
 if (os.platform() === 'win32') {
 	internalMochaPath = path.resolve('node_modules', '.bin', 'mocha.cmd');
 } else {
@@ -20,11 +20,13 @@ describe('Check TeamCity Output is correct', function () {
 
 	before(function (done) {
 		execFile(internalMochaPath, ['test/test_data', '--reporter', 'lib/teamcity'], (err, stdout, stderr) => {
-			console.log(stdout);
 			teamCityStdout = stdout;
 			teamCityStderr = stderr;
 			teamCityOutputArray = stdout.split('\n');
-			console.log(teamCityOutputArray);
+			console.log('Observed Reporter Output');
+			console.log('|#####################|');
+			console.log(stdout);
+			console.log('|#####################|');
 			done();
 		});
 	});
