@@ -18,6 +18,7 @@ test_script:
   - npm --version
   # run tests
   - npm test
+  - npm run test-teamcity-example
 
 # Don't actually build.
 build: off

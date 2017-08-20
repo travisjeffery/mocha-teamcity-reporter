@@ -32,4 +32,7 @@ Then call mocha with:
 
 ## Customisation:
 Can set flowId like:  
-`mocha test/test_data --reporter lib\teamcity --reporter-options flowId=gobbledygook`
+`mocha test --reporter lib/teamcity --reporter-options flowId=gobbledygook`
+
+## Run example:
+`mocha test/test_data/simple.js --reporter lib/teamcity`
