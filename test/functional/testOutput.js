@@ -78,7 +78,8 @@ describe('Check TeamCity Output is correct', function () {
 		assert.ok(/name='Failing Test @fail'/.test(rowToCheck));
 		assert.ok(/flowId=/.test(rowToCheck));
 		assert.ok(/duration=/.test(rowToCheck) === false);
-		assert.ok(/details='AssertionError:/.test(rowToCheck));
+		assert.ok(/details='/.test(rowToCheck));
+		assert.ok(/AssertionError/.test(rowToCheck));
 		assert.ok(/|n/.test(rowToCheck));
 		assert.ok(/|simple.js:11:11/.test(rowToCheck));
 		assert.ok(/captureStandardOutput='true'/.test(rowToCheck));
