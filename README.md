@@ -14,6 +14,11 @@ which does not appear to be maintained or accepting Pull requests. Also note thi
 * other small bug fixes
 * Functional tests
 
+## Requirements
+* NodeJs 4+
+
+## Usage
+
 https://github.com/visionmedia/mocha/wiki/Third-party-reporters describes using third party reporters in mocha.
 
 Basically, have your project's package.json be like:
@@ -34,5 +39,5 @@ Then call mocha with:
 Can set flowId like:  
 `mocha test --reporter lib/teamcity --reporter-options flowId=gobbledygook`
 
-## Run example:
-`mocha test/test_data/simple.js --reporter lib/teamcity`
+## Run example test:
+`mocha test/test_data/simple.js --reporter lib/teamcity` or `test-teamcity-example`
