@@ -11,6 +11,8 @@ which does not appear to be maintained or accepting Pull requests. Also note thi
 
 ## Why use this over the original:
 * Support flowId's
+    * Why use flowIds? Flow tracking is necessary, for example, to distinguish separate processes running in parallel
+    * This package defaults to process.pid, so it works with concurrent task runners (Gulp/Grunt etc)
 * other small bug fixes
 * Functional tests
 
@@ -39,5 +41,13 @@ Then call mocha with:
 Can set flowId like:  
 `mocha test --reporter lib/teamcity --reporter-options flowId=gobbledygook`
 
+## Contributions
+* Always Welcome
+* Would prefer if customisation is added it is controlled via mocha options or environment variables
+* Only requirement is for code to pass linting and functional tests
+
 ## Run example test:
 `mocha test/test_data/simple.js --reporter lib/teamcity` or `test-teamcity-example`
+
+## Reference Information
+https://confluence.jetbrains.com/display/TCD10/Build+Script+Interaction+with+TeamCity
