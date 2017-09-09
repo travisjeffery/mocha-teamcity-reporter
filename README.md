@@ -28,18 +28,18 @@ Basically, have your project's package.json be like:
 ``` js
 {
   "devDependencies": {
-    "mocha-teamcity-reporter": ">=0.0.1"
+    "mocha-teamcity-reporter-v2": ">=2.0.0"
   }
 }
 ```
 
 Then call mocha with:
 
-`mocha --reporter mocha-teamcity-reporter test`
+`mocha --reporter mocha-teamcity-reporter-v2 test`
 
 ## Customisation:
 Can set flowId like:  
-`mocha test --reporter lib/teamcity --reporter-options flowId=gobbledygook`
+`mocha test --reporter mocha-teamcity-reporter-v2 --reporter-options flowId=gobbledygook`
 
 ## Contributions
 * Always Welcome
@@ -47,7 +47,7 @@ Can set flowId like:
 * Only requirement is for code to pass linting and functional tests
 
 ## Run example test:
-`mocha test/test_data/simple.js --reporter lib/teamcity` or `test-teamcity-example`
+`mocha test/test_data/simple.js --reporter mocha-teamcity-reporter-v2` or `test-teamcity-example`
 
 ## Reference Information
 https://confluence.jetbrains.com/display/TCD10/Build+Script+Interaction+with+TeamCity
