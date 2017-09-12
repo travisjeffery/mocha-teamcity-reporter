@@ -3,7 +3,7 @@
   "engines": {
     "node": ">=4"
   },
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "teamcity reporter for mocha",
   "main": "./lib/teamcity.js",
   "directories": {

@@ -10,6 +10,7 @@ Please note this has been forked from the original author https://github.com/tra
 which does not appear to be maintained or accepting Pull requests. Also note this is not endorsed by the original creator
 
 ## Why use this over the original:
+* Drop in replacement for the original mocha-teamcity-reporter
 * Support flowId's
     * Why use flowIds? Flow tracking is necessary, for example, to distinguish separate processes running in parallel
     * This package defaults to process.pid, so it works with concurrent task runners (Gulp/Grunt etc)
@@ -19,9 +20,11 @@ which does not appear to be maintained or accepting Pull requests. Also note thi
 ## Requirements
 * NodeJs 4+
 
-## Usage
+## To Install
 
-https://github.com/visionmedia/mocha/wiki/Third-party-reporters describes using third party reporters in mocha.
+In your project run a npm install command:
+
+``` npm install mocha-teamcity-reporter-v2 --save-dev ```
 
 Basically, have your project's package.json be like:
 
@@ -32,6 +35,10 @@ Basically, have your project's package.json be like:
   }
 }
 ```
+
+## Usage
+
+https://github.com/visionmedia/mocha/wiki/Third-party-reporters describes using third party reporters in mocha.
 
 Then call mocha with:
 
@@ -46,7 +53,7 @@ Can set flowId like:
 * Would prefer if customisation is added it is controlled via mocha options or environment variables
 * Only requirement is for code to pass linting and functional tests
 
-## Run example test:
+## Run example test in project:
 `mocha test/test_data/simple.js --reporter mocha-teamcity-reporter-v2` or `test-teamcity-example`
 
 ## Reference Information
