@@ -5,15 +5,10 @@
 'use strict';
 const {execFile} = require('child_process');
 const assert = require('assert');
-const os = require('os');
-const path = require('path');
 
-let internalMochaPath;
-if (os.platform() === 'win32') {
-	internalMochaPath = path.resolve('node_modules', '.bin', 'mocha.cmd');
-} else {
-	internalMochaPath = path.resolve('node_modules', '.bin', 'mocha');
-}
+const { logMochaOutput, getMochaPath } = require('./helpers');
+
+const internalMochaPath = getMochaPath();
 
 describe('Check TeamCity Output is correct', function () {
 	let teamCityStdout, teamCityStderr, teamCityOutputArray;
@@ -23,10 +18,7 @@ describe('Check TeamCity Output is correct', function () {
 			teamCityStdout = stdout;
 			teamCityStderr = stderr;
 			teamCityOutputArray = stdout.split('\n');
-			console.log('Observed Reporter Output');
-			console.log('|#####################|');
-			console.log(stdout);
-			console.log('|#####################|');
+			logMochaOutput(stdout, stderr);
 			done();
 		});
 	});
