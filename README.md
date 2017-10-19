@@ -45,8 +45,25 @@ Then call mocha with:
 `mocha --reporter mocha-teamcity-reporter-v2 test`
 
 ## Customisation:
-Can set flowId like:  
+
+### TeamCity flowId
+
+Can set flowId like:
 `mocha test --reporter mocha-teamcity-reporter-v2 --reporter-options flowId=gobbledygook`
+
+### Top-level suite name
+
+Can set a top-level suite name, which will wrap all other suites.
+
+This is useful for reading test output when running multiple suites in a single build:
+
+* Set with reporter-options:
+
+`mocha test --reporter mocha-teamcity-reporter-v2 --reporter-options topLevelSuite=top-level-suite-name`
+
+* Set with environment variable
+
+`MOCHA_TEAMCITY_TOP_LEVEL_SUITE='top-level-suite-name' mocha test --reporter mocha-teamcity-reporter-v2`
 
 ## Contributions
 * Always Welcome
