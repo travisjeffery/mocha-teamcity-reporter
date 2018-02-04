@@ -20,14 +20,14 @@ available on the Tests tab of the Build Results page.
 
 In your project run a npm install command:
 
-``` npm install mocha-teamcity-reporter-v2 --save-dev ```
+``` npm install mocha-teamcity-reporter --save-dev ```
 
 Basically, have your project's package.json be like:
 
 ``` js
 {
   "devDependencies": {
-    "mocha-teamcity-reporter-v2": ">=2.0.0"
+    "mocha-teamcity-reporter": ">=2.0.0"
   }
 }
 ```
@@ -38,14 +38,14 @@ https://github.com/visionmedia/mocha/wiki/Third-party-reporters describes using 
 
 Then call mocha with:
 
-`mocha --reporter mocha-teamcity-reporter-v2 test`
+`mocha --reporter mocha-teamcity-reporter test`
 
 ## Customisation:
 
 ### TeamCity flowId
 
 Can set flowId like:
-`mocha test --reporter mocha-teamcity-reporter-v2 --reporter-options flowId=gobbledygook`
+`mocha test --reporter mocha-teamcity-reporter --reporter-options flowId=gobbledygook`
 
 ### Top-level suite name
 
@@ -55,11 +55,11 @@ This is useful for reading test output when running multiple suites in a single 
 
 * Set with reporter-options:
 
-`mocha test --reporter mocha-teamcity-reporter-v2 --reporter-options topLevelSuite=top-level-suite-name`
+`mocha test --reporter mocha-teamcity-reporter --reporter-options topLevelSuite=top-level-suite-name`
 
 * Set with environment variable
 
-`MOCHA_TEAMCITY_TOP_LEVEL_SUITE='top-level-suite-name' mocha test --reporter mocha-teamcity-reporter-v2`
+`MOCHA_TEAMCITY_TOP_LEVEL_SUITE='top-level-suite-name' mocha test --reporter mocha-teamcity-reporter`
 
 ## Contributions
 * Always Welcome
@@ -67,7 +67,7 @@ This is useful for reading test output when running multiple suites in a single 
 * Only requirement is for code to pass linting and functional tests
 
 ## Run example test in project:
-`mocha test/test_data/simple.js --reporter mocha-teamcity-reporter-v2` or `npm run test-teamcity-example`
+`mocha test/test_data/simple.js --reporter mocha-teamcity-reporter` or `npm run test-teamcity-example`
 
 ## Reference Information
 https://confluence.jetbrains.com/display/TCD10/Build+Script+Interaction+with+TeamCity
