@@ -1,3 +1,7 @@
+2.2.0 / 2017-10-19 
+==================
+* Merge back into master branch by Travis includes documentation changes
+
 2.1.0 / 2017-10-19 
 ==================
 * add top level suite option (@davidmfoley)

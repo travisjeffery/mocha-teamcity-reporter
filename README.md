@@ -3,14 +3,11 @@
 mocha-teamcity-reporter Teamcity reporter which makes it possible to display test results in real-time, makes test information 
 available on the Tests tab of the Build Results page.
 
-Please note this has been forked from the original author https://github.com/travisjeffery/mocha-teamcity-reporter 
-which does not appear to be maintained or accepting Pull requests. Also note this is not endorsed by the original creator
-
-## Why use this over the original:
-* Drop in replacement for the original mocha-teamcity-reporter
+## Version 2.x changes
+* Breaking change, support node4.x+ only 
 * Support flowId's
     * Why use flowIds? Flow tracking is necessary, for example, to distinguish separate processes running in parallel
-    * This package defaults to process.pid, so it works with concurrent task runners (Gulp/Grunt etc)
+    * This defaults to process.pid, so it works with concurrent task runners (Gulp/Grunt etc)
 * other small bug fixes
 * Functional tests
 
@@ -68,7 +65,7 @@ This is useful for reading test output when running multiple suites in a single 
 * Only requirement is for code to pass linting and functional tests
 
 ## Run example test in project:
-`mocha test/test_data/simple.js --reporter mocha-teamcity-reporter-v2` or `test-teamcity-example`
+`mocha test/test_data/simple.js --reporter mocha-teamcity-reporter-v2` or `npm run test-teamcity-example`
 
 ## Reference Information
 https://confluence.jetbrains.com/display/TCD10/Build+Script+Interaction+with+TeamCity
