@@ -1,5 +1,5 @@
 {
-  "name": "mocha-teamcity-reporter-v2",
+  "name": "mocha-teamcity-reporter",
   "engines": {
     "node": ">=4"
   },
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamie-sherriff/mocha-teamcity-reporter"
+    "url": "https://github.com/travisjeffery/mocha-teamcity-reporter"
   },
   "keywords": [
     "mocha",
@@ -27,10 +27,16 @@
   "dependencies": {
     "mocha": ">=3.5.0"
   },
-  "author": "Jamie Sherriff",
+  "author": "travis jeffery",
+  "maintainers": [
+    {
+      "name": "Jamie Sherriff",
+      "url": "https://github.com/jamie-sherriff"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jamie-sherriff/mocha-teamcity-reporter/issues"
+    "url": "https://github.com/travisjeffery/mocha-teamcity-reporter/issues"
   },
   "devDependencies": {
     "eslint": "^4.4.1"
