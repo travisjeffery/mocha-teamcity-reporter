@@ -47,10 +47,6 @@
     ],
     //"no-mixed-spaces-and-tab": ["error", "smart-tabs"],
     "no-console": 0,
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
     "quotes": [
       "error",
       "single",
