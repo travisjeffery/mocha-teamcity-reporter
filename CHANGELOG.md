@@ -1,4 +1,4 @@
-2.2.0 / 2017-10-19 
+2.2.0 / 2018-02-04 
 ==================
 * Merge back into master branch by Travis includes documentation changes
 
