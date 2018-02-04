@@ -12,7 +12,8 @@
   "scripts": {
     "test": "mocha test/functional",
     "test-teamcity-example": "mocha test/test_data/simple.js --reporter lib/teamcity.js",
-    "lint": "eslint lib/*.js test/**/*.js"
+    "lint": "eslint lib/*.js test/**/*.js",
+    "lint-fix": "eslint --fix lib/*.js test/**/*.js"
   },
   "repository": {
     "type": "git",

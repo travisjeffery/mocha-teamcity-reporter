@@ -1,3 +1,5 @@
+[![NPM version](https://badge.fury.io/js/mocha-teamcity-reporter.svg)](http://badge.fury.io/js/mocha-teamcity-reporter)
+
 # mocha-teamcity-reporter #
 
 mocha-teamcity-reporter Teamcity reporter which makes it possible to display test results in real-time, makes test information 
