@@ -1,3 +1,21 @@
+2.2.0 / 2018-02-04 
+==================
+* Merge back into master branch by Travis includes documentation changes
+
+2.1.0 / 2017-10-19 
+==================
+* add top level suite option (@davidmfoley)
+
+2.0.1 / 2017-08-22 
+==================
+* Bug Fixes
+
+2.0.0 / 2017-08-20
+==================
+* Add FlowId
+* Minimum nodejs engine of 4+
+* Add some eslint magic
+
 
 1.1.0 / 2016-08-24 
 ==================

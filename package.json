@@ -1,15 +1,23 @@
 {
   "name": "mocha-teamcity-reporter",
-  "version": "1.1.1",
+  "engines": {
+    "node": ">=4"
+  },
+  "version": "2.2.0",
   "description": "teamcity reporter for mocha",
   "main": "./lib/teamcity.js",
-  "directories": "./lib",
+  "directories": {
+    "lib": "./lib"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/functional",
+    "test-teamcity-example": "mocha test/test_data/simple.js --reporter lib/teamcity.js",
+    "lint": "eslint lib/*.js test/**/*.js",
+    "lint-fix": "eslint --fix lib/*.js test/**/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/travisjeffery/mocha-teamcity-reporter.git"
+    "url": "https://github.com/travisjeffery/mocha-teamcity-reporter"
   },
   "keywords": [
     "mocha",
@@ -18,11 +26,20 @@
     "jetbrains"
   ],
   "dependencies": {
-    "mocha": ">=1.13.0"
+    "mocha": ">=3.5.0"
   },
   "author": "travis jeffery",
+  "maintainers": [
+    {
+      "name": "Jamie Sherriff",
+      "url": "https://github.com/jamie-sherriff"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/travisjeffery/mocha-teamcity-reporter/issues"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1"
   }
 }
