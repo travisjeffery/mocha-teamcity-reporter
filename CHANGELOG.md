@@ -1,6 +1,12 @@
-2.2.0 / 2018-02-04 
+2.2.0 / 2018-02-05 
 ==================
-* Merge back into master branch by Travis includes documentation changes
+* Maintenance Update, Merged forked branch back into master branch by Travis
+* Breaking change, supports node 4+ only 
+* Support flowId's
+    * Why use flowIds? Flow tracking is necessary, for example, to distinguish separate processes running in parallel
+    * This defaults to process.pid, so it works with concurrent task runners (Gulp/Grunt etc)
+* Other small bug fixes
+* Functional tests
 
 2.1.0 / 2017-10-19 
 ==================
@@ -16,21 +22,17 @@
 * Minimum nodejs engine of 4+
 * Add some eslint magic
 
-
 1.1.0 / 2016-08-24 
 ==================
-
   * Support running in the browser with Mocha without require.js
 
 1.0.1 / 2016-07-18
 ==================
-
   * Remove escape sequences from reporting
   * Fix NaN duration
 
 1.0.0 / 2015-09-30
 ==================
-
   * Merge pull request #14 from debitoor/master
   * add err.stack to details of error
   * Merge pull request #8 from bdefore/master
