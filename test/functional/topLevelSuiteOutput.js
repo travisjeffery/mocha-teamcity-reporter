@@ -1,46 +1,46 @@
 'use strict';
 const {execFile} = require('child_process');
-const assert = require('assert');
-const { logMochaOutput, getMochaPath } = require('./helpers');
+const {assert} = require('chai');
+const { logMochaOutput, getMochaPath } = require('../testHelpers');
 const internalMochaPath = getMochaPath();
 
 describe('Check TeamCity Output is correct with outer suite', function () {
 	let teamCityStdout, teamCityStderr, teamCityOutputArray;
 	function verifyResults() {
 		it('stdout output should exist', function () {
-			assert.ok(teamCityStdout, 'has output');
-			assert.ok(teamCityOutputArray, 'array of output is populated');
-			assert.ok(teamCityOutputArray.length >= 10, 'at least 10 lines of output');
+			assert.isOk(teamCityStdout, 'has output');
+			assert.isOk(teamCityOutputArray, 'array of output is populated');
+			assert.isOk(teamCityOutputArray.length >= 10, 'at least 10 lines of output');
 		});
 
 		it('stderr output should not exist', function () {
-			assert.ok(teamCityStderr.length === 0);
+			assert.isOk(teamCityStderr.length === 0);
 		});
 
 		it('Prefix suite start is present', function () {
 			const rowToCheck = teamCityOutputArray[0];
-			assert.ok(/##teamcity\[testSuiteStarted/.test(rowToCheck));
-			assert.ok(/name='test-outer-suite-name'/.test(rowToCheck));
-			assert.ok(/flowId=/.test(rowToCheck));
-			assert.ok(/]/.test(rowToCheck));
+			assert.isOk(/##teamcity\[testSuiteStarted/.test(rowToCheck));
+			assert.isOk(/name='test-outer-suite-name'/.test(rowToCheck));
+			assert.isOk(/flowId=/.test(rowToCheck));
+			assert.isOk(/]/.test(rowToCheck));
 		});
 
 		it('Prefix suite end is present', function () {
 			const rowToCheck = teamCityOutputArray[11];
-			assert.ok(/##teamcity\[testSuiteFinished/.test(rowToCheck));
-			assert.ok(/name='mocha.suite'/.test(rowToCheck));
-			assert.ok(/duration=/.test(rowToCheck));
-			assert.ok(/flowId=/.test(rowToCheck));
-			assert.ok(/]/.test(rowToCheck));
+			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
+			assert.isOk(/name='mocha.suite'/.test(rowToCheck));
+			assert.isOk(/duration=/.test(rowToCheck));
+			assert.isOk(/flowId=/.test(rowToCheck));
+			assert.isOk(/]/.test(rowToCheck));
 		});
 
 		it('Suite Root Finished is OK', function () {
 			const rowToCheck = teamCityOutputArray[11];
-			assert.ok(/##teamcity\[testSuiteFinished/.test(rowToCheck));
-			assert.ok(/name='mocha.suite'/.test(rowToCheck));
-			assert.ok(/duration=/.test(rowToCheck));
-			assert.ok(/flowId=/.test(rowToCheck));
-			assert.ok(/]/.test(rowToCheck));
+			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
+			assert.isOk(/name='mocha.suite'/.test(rowToCheck));
+			assert.isOk(/duration=/.test(rowToCheck));
+			assert.isOk(/flowId=/.test(rowToCheck));
+			assert.isOk(/]/.test(rowToCheck));
 		});
 	}
 

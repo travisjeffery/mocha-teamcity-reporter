@@ -1,3 +1,8 @@
+2.2.1 / 2018-02-06
+==================
+* Merge pull request #38 reporterOptions are optional from chge/master
+* Add a test to catch above PR
+
 2.2.0 / 2018-02-05 
 ==================
 * Maintenance Update, Merged forked branch back into master branch by Travis

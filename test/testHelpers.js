@@ -27,7 +27,12 @@ function getMochaPath() {
 	}
 }
 
+function getTestDataPath(){
+	return path.join('test', 'test_data');
+}
+
 module.exports = {
 	logMochaOutput,
-	getMochaPath
+	getMochaPath,
+	getTestDataPath
 };
