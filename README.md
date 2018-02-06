@@ -1,4 +1,5 @@
 [![NPM version](https://badge.fury.io/js/mocha-teamcity-reporter.svg)](http://badge.fury.io/js/mocha-teamcity-reporter)
+[![Build Status](https://travis-ci.org/travisjeffery/mocha-teamcity-reporter.svg?branch=master)](https://travis-ci.org/travisjeffery/mocha-teamcity-reporter)
 
 # mocha-teamcity-reporter #
 
