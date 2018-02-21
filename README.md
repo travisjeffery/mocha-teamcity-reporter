@@ -62,6 +62,11 @@ This is useful for reading test output when running multiple suites in a single 
 
 `MOCHA_TEAMCITY_TOP_LEVEL_SUITE='top-level-suite-name' mocha test --reporter mocha-teamcity-reporter`
 
+## View on live Teamcity
+* Project can be viewed at
+[Pubic Teamcity at Jetbrains mocha reporter](https://teamcity.jetbrains.com/project.html?projectId=TeamCityThirdPartyPlugins_MochaTeamcityReporter) 
+* Thanks to JetBrains for hosting
+
 ## Contributions
 * Always Welcome
 * Would prefer if customisation is added it is controlled via mocha options or environment variables

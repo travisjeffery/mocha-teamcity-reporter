@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "mocha test/functional test/programmatic",
-    "test-teamcity-example": "mocha test/test_data/simple.js --reporter lib/teamcity.js",
+    "test-teamcity": "mocha test/functional test/programmatic --reporter lib/teamcity.js",
+    "test-teamcity-example": "mocha test/example/exampleSimple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js",
     "lint-fix": "eslint --fix lib/*.js test/**/*.js"
   },
