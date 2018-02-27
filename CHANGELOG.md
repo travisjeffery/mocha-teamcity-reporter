@@ -1,3 +1,8 @@
+2.2.2 / 2018-02-27
+==================
+* Fix issue #39
+* Add real teamcity tests
+
 2.2.1 / 2018-02-06
 ==================
 * Merge pull request #38 reporterOptions are optional from chge/master
