@@ -27,7 +27,7 @@
     "jetbrains"
   ],
   "dependencies": {
-    "mocha": "^5.0.1"
+    "mocha": ">=3.5.0"
   },
   "author": "travis jeffery",
   "maintainers": [
