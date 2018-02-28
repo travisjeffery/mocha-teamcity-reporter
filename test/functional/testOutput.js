@@ -3,8 +3,10 @@
  * Must be run from the root project dir
  */
 'use strict';
+
 const {execFile} = require('child_process');
 const {assert} = require('chai');
+const path = require('path');
 
 const { logMochaOutput, getMochaPath } = require('../testHelpers');
 
@@ -14,7 +16,7 @@ describe('Check TeamCity Output is correct', function () {
 	let teamCityStdout, teamCityStderr, teamCityOutputArray;
 
 	before(function (done) {
-		execFile(internalMochaPath, ['test/test_data', '--reporter', 'lib/teamcity'], (err, stdout, stderr) => {
+		execFile(internalMochaPath, [path.join('test', 'test_data', 'simple.js'), '--reporter', 'lib/teamcity'], (err, stdout, stderr) => {
 			teamCityStdout = stdout;
 			teamCityStderr = stderr;
 			teamCityOutputArray = stdout.split('\n');

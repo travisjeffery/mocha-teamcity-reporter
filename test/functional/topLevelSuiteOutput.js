@@ -1,11 +1,13 @@
 'use strict';
 const {execFile} = require('child_process');
 const {assert} = require('chai');
-const { logMochaOutput, getMochaPath } = require('../testHelpers');
+const {logMochaOutput, getMochaPath} = require('../testHelpers');
 const internalMochaPath = getMochaPath();
+const path = require('path');
 
 describe('Check TeamCity Output is correct with outer suite', function () {
 	let teamCityStdout, teamCityStderr, teamCityOutputArray;
+
 	function verifyResults() {
 		it('stdout output should exist', function () {
 			assert.isOk(teamCityStdout, 'has output');
@@ -53,7 +55,7 @@ describe('Check TeamCity Output is correct with outer suite', function () {
 			};
 
 			execFile(internalMochaPath, [
-				'test/test_data',
+				path.join('test', 'test_data', 'simple.js'),
 				'--reporter',
 				'lib/teamcity'
 			], opts, (err, stdout, stderr) => {
@@ -70,7 +72,7 @@ describe('Check TeamCity Output is correct with outer suite', function () {
 	describe('specified with --reporter-options', function () {
 		before(function (done) {
 			execFile(internalMochaPath, [
-				'test/test_data',
+				path.join('test', 'test_data', 'simple.js'),
 				'--reporter',
 				'lib/teamcity',
 				'--reporter-options',

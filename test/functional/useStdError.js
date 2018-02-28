@@ -3,6 +3,7 @@ const {execFile} = require('child_process');
 const {assert} = require('chai');
 const { logMochaOutput, getMochaPath } = require('../testHelpers');
 const internalMochaPath = getMochaPath();
+const path = require('path');
 
 describe('Check TeamCity Output is correct with stdError option', function () {
 	let teamCityStdout, teamCityStderr, teamCityOutputArray, teamCityErrorOutputArray;
@@ -149,7 +150,7 @@ describe('Check TeamCity Output is correct with stdError option', function () {
 	describe('specified with --reporter-options', function () {
 		before(function (done) {
 			execFile(internalMochaPath, [
-				'test/test_data',
+				path.join('test', 'test_data', 'simple.js'),
 				'--reporter',
 				'lib/teamcity',
 				'--reporter-options',
