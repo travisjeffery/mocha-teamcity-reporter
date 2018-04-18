@@ -50,13 +50,25 @@ Can set flowId like:
 
 ### Top-level suite name
 
-Can set a top-level suite name, which will wrap all other suites.
+Can set a top-level suite name, which will wrap all other suites.  
+This is useful for reading test output when running multiple suites in a single build
 
-This is useful for reading test output when running multiple suites in a single build:
+* Environment variable: MOCHA_TEAMCITY_TOP_LEVEL_SUITE=<suiteName>
+* Reporter option: topLevelSuite=<suiteName>
+
+### log test failures with std error
+To enable this please
+Please note this will probaly be made default in the next major version
+
+* Environment variable: USE_STD_ERROR=true  
+* Reporter option: useStdError=true
+
+### Setting options
 
 * Set with reporter-options:
 
 `mocha test --reporter mocha-teamcity-reporter --reporter-options topLevelSuite=top-level-suite-name`
+`mocha test --reporter mocha-teamcity-reporter --reporter-options useStdError=true`
 
 * Set with environment variable
 
