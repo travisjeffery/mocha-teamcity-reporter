@@ -28,4 +28,8 @@ const assert = require('assert');
 			it('Example Test  Failing Test @fail', function () {
 				assert.equal(2, 1);
 			});
+
+			it('Example Test  Failing Test @fail', function () {
+				assert.equal(1, 1);
+			});
 });

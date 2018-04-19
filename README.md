@@ -63,11 +63,20 @@ Please note this will probaly be made default in the next major version
 * Environment variable: USE_STD_ERROR=true  
 * Reporter option: useStdError=true
 
+### Record hook failures
+Record failures for hooks such as before/after etc
+Please note this will probaly be made default in the next major version
+
+* Environment variable: RECORD_HOOK_FAILURES=true  
+* Reporter option: recordHookFailures=true
+
+
 ### Setting options
 
 * Set with reporter-options:
 
 `mocha test --reporter mocha-teamcity-reporter --reporter-options topLevelSuite=top-level-suite-name`
+`mocha test --reporter mocha-teamcity-reporter --reporter-options useStdError=true`
 `mocha test --reporter mocha-teamcity-reporter --reporter-options useStdError=true`
 
 * Set with environment variable
