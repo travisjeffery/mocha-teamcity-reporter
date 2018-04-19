@@ -5,8 +5,8 @@
 const assert = require('assert');
 	describe('Example Test Top Describe', function () {
 
-		before(function() {
-			throw new Error('Before hook error fail')
+		before(function () {
+			throw new Error('Before hook error fail');
 		});
 
 		it('Example Test  Passing Test @pass', function () {
@@ -21,8 +21,11 @@ const assert = require('assert');
 	});
 		describe('Example Test Top Describe', function () {
 
+			before(function () {
+				assert.equal(1, 1);
+			});
+
 			it('Example Test  Failing Test @fail', function () {
 				assert.equal(2, 1);
 			});
-
 });
