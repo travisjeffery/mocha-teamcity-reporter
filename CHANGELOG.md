@@ -1,3 +1,7 @@
+2.4.0 / 2018-04-18
+==================
+* Add Browser Support back in by use of separate file, solves #41
+
 2.3.0 / 2018-04-18
 ==================
 * Add use stdError option solves #31
