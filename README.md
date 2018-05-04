@@ -45,7 +45,8 @@ Then call mocha with:
 ## Running In Browser
 * Use `lib/teamcityBrowser`
 * Has option parsing stripped out for the moment
-* example use can be found in `test\browser`
+* Example use can be found in `test\browser`
+* Custom log function can be set with window.customLogFunction
 
 ## Customisation:
 
