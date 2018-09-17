@@ -72,7 +72,7 @@ Please note this will probaly be made default in the next major version
 
 ### Record hook failures
 Record failures for hooks such as before/after etc
-Please note this will probaly be made default in the next major version
+Please note this will probably be made default in the next major version
 
 * Environment variable: RECORD_HOOK_FAILURES=true  
 * Reporter option: recordHookFailures=true
