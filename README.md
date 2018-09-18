@@ -1,5 +1,6 @@
 [![NPM version](https://badge.fury.io/js/mocha-teamcity-reporter.svg)](http://badge.fury.io/js/mocha-teamcity-reporter)
 [![Build Status](https://travis-ci.org/travisjeffery/mocha-teamcity-reporter.svg?branch=master)](https://travis-ci.org/travisjeffery/mocha-teamcity-reporter)
+[![TeamCity Build Status](https://teamcity.jetbrains.com/guestAuth/app/rest/builds/buildType:(id:TeamCityThirdPartyPlugins_MochaTeamcityReporter_Build)/statusIcon.svg)](https://teamcity.jetbrains.com/viewType.html?buildTypeId=TeamCityThirdPartyPlugins_MochaTeamcityReporter_Build&branch_TeamCityThirdPartyPlugins_MochaTeamcityReporter=%3Cdefault%3E&tab=buildTypeStatusDiv)
 
 # mocha-teamcity-reporter #
 
