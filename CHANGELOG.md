@@ -1,3 +1,7 @@
+2.5.0 / 2018-09-18
+==================
+* Add test in hook option, solves #35
+
 2.4.0 / 2018-04-18
 ==================
 * Add Browser Support back in by use of separate file, solves #41
