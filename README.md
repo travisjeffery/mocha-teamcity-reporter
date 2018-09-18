@@ -1,5 +1,6 @@
 [![NPM version](https://badge.fury.io/js/mocha-teamcity-reporter.svg)](http://badge.fury.io/js/mocha-teamcity-reporter)
 [![Build Status](https://travis-ci.org/travisjeffery/mocha-teamcity-reporter.svg?branch=master)](https://travis-ci.org/travisjeffery/mocha-teamcity-reporter)
+[![TeamCity Build Status](https://teamcity.jetbrains.com/guestAuth/app/rest/builds/buildType:(id:TeamCityThirdPartyPlugins_MochaTeamcityReporter_Build)/statusIcon.svg)](https://teamcity.jetbrains.com/viewType.html?buildTypeId=TeamCityThirdPartyPlugins_MochaTeamcityReporter_Build&branch_TeamCityThirdPartyPlugins_MochaTeamcityReporter=%3Cdefault%3E&tab=buildTypeStatusDiv)
 
 # mocha-teamcity-reporter #
 
@@ -70,11 +71,20 @@ Please note this will probaly be made default in the next major version
 * Environment variable: USE_STD_ERROR=true  
 * Reporter option: useStdError=true
 
+### Record hook failures
+Record failures for hooks such as before/after etc
+Please note this will probably be made default in the next major version
+
+* Environment variable: RECORD_HOOK_FAILURES=true  
+* Reporter option: recordHookFailures=true
+
+
 ### Setting options
 
 * Set with reporter-options:
 
 `mocha test --reporter mocha-teamcity-reporter --reporter-options topLevelSuite=top-level-suite-name`
+`mocha test --reporter mocha-teamcity-reporter --reporter-options useStdError=true`
 `mocha test --reporter mocha-teamcity-reporter --reporter-options useStdError=true`
 
 * Set with environment variable
