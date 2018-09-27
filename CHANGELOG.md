@@ -1,3 +1,7 @@
+2.5.1 / 2018-09-18
+==================
+* Vuejs/Webpack compatibility, solves #45
+
 2.5.0 / 2018-09-18
 ==================
 * Add test in hook option, solves #35
