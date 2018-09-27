@@ -1,4 +1,4 @@
-2.5.1 / 2018-09-18
+2.5.1 / 2018-09-27
 ==================
 * Vuejs/Webpack compatibility, solves #45
 
