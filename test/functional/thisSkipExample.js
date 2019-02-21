@@ -1,5 +1,18 @@
+'use strict';
+
 describe('something', function () {
 	let stubA;
+
+	function stubThingA(){
+		console.log('stubbingThing A');
+	}
+	function stubThingB(){
+		console.log('stubbingThing B');
+	}
+
+	function reasons(){
+		return false;
+	}
 
 	before(function () {
 		stubA = stubThingA();
