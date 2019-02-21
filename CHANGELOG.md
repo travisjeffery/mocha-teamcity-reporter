@@ -3,6 +3,10 @@
 * Change mocha to peer dependency
 * support mocha@6
 
+2.5.2 / 2019-01-21
+==================
+* Restrict mocha dependency to less than 6 due to compatibility issues
+
 2.5.1 / 2018-09-27
 ==================
 * Vuejs/Webpack compatibility, solves #45
