@@ -7,6 +7,10 @@
 mocha-teamcity-reporter Teamcity reporter which makes it possible to display test results in real-time, makes test information 
 available on the Tests tab of the Build Results page.
 
+## Version 3.x changes
+* Change mocha to peer dependency
+* Support mocha version 6
+
 ## Version 2.x changes
 * Breaking change, support node4.x+ only 
 * Support flowId's

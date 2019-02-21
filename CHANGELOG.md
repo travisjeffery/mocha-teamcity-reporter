@@ -1,7 +1,7 @@
 3.0.0 / 2019-01-21
 ==================
 * Change mocha to peer dependency
-* support mocha@6
+* Support mocha version 6
 
 2.5.2 / 2019-01-21
 ==================
