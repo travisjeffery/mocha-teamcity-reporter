@@ -44,7 +44,7 @@ describe('Check TeamCity Output is correct with recordHookFailures option', func
 		it('Hook Test Failed is OK', function () {
 			const rowToCheck = teamCityOutputArray[2];
 			assert.isOk(/##teamcity\[testFailed/.test(rowToCheck));
-			assert.isOk(/name='"before all" hook'/.test(rowToCheck));
+			assert.isOk(/name='"before all" hook/.test(rowToCheck));
 			assert.isOk(/details='/.test(rowToCheck));
 			assert.isOk(/Error: Before hook error fail/.test(rowToCheck));
 			assert.isOk(/|n/.test(rowToCheck));

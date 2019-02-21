@@ -3,7 +3,7 @@
   "engines": {
     "node": ">=4"
   },
-  "version": "2.5.1",
+  "version": "3.0.0",
   "description": "teamcity reporter for mocha",
   "main": "./lib/teamcity.js",
   "directories": {
@@ -26,8 +26,8 @@
     "reporter",
     "jetbrains"
   ],
-  "dependencies": {
-    "mocha": "^6.0.0"
+  "peerDependencies": {
+    "mocha": ">=3.5.0"
   },
   "author": "travis jeffery",
   "maintainers": [
