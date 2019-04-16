@@ -15,7 +15,7 @@
     "test-teamcity-example": "mocha test/example/exampleSimple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js",
     "lint-fix": "eslint --fix lib/*.js test/**/*.js",
-    "prepublish": "npm run test"
+    "prepare": "npm run test"
   },
   "repository": {
     "type": "git",
