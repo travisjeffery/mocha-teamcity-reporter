@@ -14,6 +14,9 @@ available on the Tests tab of the Build Results page.
 * Breaking: Remove phantomJs support, only supports environments which have require node.js style imports
 * Breaking: Remove Redundant top level mocha.suite
 
+## Mocha@6 notes
+* recordHookFailures option may not work as intended as mocha6 is now doing this itself
+
 ## Requirements
 * NodeJs 4+
 * Web Browser supporting ES5
