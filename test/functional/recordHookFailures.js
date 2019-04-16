@@ -11,7 +11,8 @@ describe('Check TeamCity Output is correct with recordHookFailures option', func
 		it('stdout output should exist', function () {
 			assert.isOk(teamCityStdout, 'has output');
 			assert.isOk(teamCityOutputArray, 'array of output is populated');
-			assert.lengthOf(teamCityOutputArray, 14);
+			assert.lengthOf(teamCityOutputArray, 13);
+			assert.isEmpty(teamCityOutputArray[12])
 		});
 
 		it('stderr output should not exist', function () {
@@ -124,9 +125,9 @@ describe('Check TeamCity Output is correct with recordHookFailures option', func
 		});
 
 		it('Suite Root Finished is OK', function () {
-			const rowToCheck = teamCityOutputArray[12];
+			const rowToCheck = teamCityOutputArray[11];
 			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
-			assert.isOk(/name='mocha.suite'/.test(rowToCheck));
+			assert.isNotOk(/name='mocha.suite'/.test(rowToCheck));
 			assert.isOk(/duration=/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));

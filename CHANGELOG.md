@@ -2,6 +2,12 @@
 ==================
 * Change mocha to peer dependency
 * Support mocha version 6
+* Breaking: focus on only support node.js environments (Please )
+* Breaking: Remove phantomJs support only supports environments which have require
+* Breaking: Remove Redundant top level mocha.suite
+
+TODO
+comparisonFailure service message attributes
 
 2.5.2 / 2019-01-21
 ==================

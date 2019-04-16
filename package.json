@@ -3,7 +3,7 @@
   "engines": {
     "node": ">=4"
   },
-  "version": "3.0.0-next.0",
+  "version": "3.0.0-next.1",
   "description": "teamcity reporter for mocha",
   "main": "./lib/teamcity.js",
   "directories": {
@@ -14,7 +14,8 @@
     "test-teamcity": "mocha test/functional test/programmatic --reporter lib/teamcity.js",
     "test-teamcity-example": "mocha test/example/exampleSimple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js",
-    "lint-fix": "eslint --fix lib/*.js test/**/*.js"
+    "lint-fix": "eslint --fix lib/*.js test/**/*.js",
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",

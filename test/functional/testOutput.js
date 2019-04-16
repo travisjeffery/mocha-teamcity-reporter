@@ -118,9 +118,10 @@ describe('Check TeamCity Output is correct', function () {
 	});
 
 	it('Suite Root Finished is OK', function () {
-		const rowToCheck = teamCityOutputArray[9];
+		const rowToCheck = teamCityOutputArray[8];
+		assert.isEmpty(teamCityOutputArray[9], 'Last row should be empty');
 		assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
-		assert.isOk(/name='mocha.suite'/.test(rowToCheck));
+		assert.isNotOk(/name='mocha.suite'/.test(rowToCheck));
 		assert.isOk(/duration=/.test(rowToCheck));
 		assert.isOk(/flowId=/.test(rowToCheck));
 		assert.isOk(/]/.test(rowToCheck));

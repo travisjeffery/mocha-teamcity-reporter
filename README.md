@@ -10,14 +10,9 @@ available on the Tests tab of the Build Results page.
 ## Version 3.x changes
 * Change mocha to peer dependency
 * Support mocha version 6
-
-## Version 2.x changes
-* Breaking change, support node4.x+ only 
-* Support flowId's
-    * Why use flowIds? Flow tracking is necessary, for example, to distinguish separate processes running in parallel
-    * This defaults to process.pid, so it works with concurrent task runners (Gulp/Grunt etc)
-* other small bug fixes
-* Functional tests
+* Breaking: focus on only support node.js environments (Please let me know if your environment does not work)
+* Breaking: Remove phantomJs support, only supports environments which have require node.js style imports
+* Breaking: Remove Redundant top level mocha.suite
 
 ## Requirements
 * NodeJs 4+
