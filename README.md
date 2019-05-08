@@ -13,6 +13,8 @@ available on the Tests tab of the Build Results page.
 * Breaking: focus on only support node.js environments (Please let me know if your environment does not work)
 * Breaking: Remove phantomJs support, only supports environments which have require node.js style imports
 * Breaking: Remove Redundant top level mocha.suite
+* Drop the duration on messages if mocha returns undefined/null (for example skipped test) TeamCity will then use received timestamps to calculate duration
+
 
 ## Mocha@6 notes
 * recordHookFailures option may not work as intended as mocha6 is now doing this itself

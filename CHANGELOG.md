@@ -4,7 +4,8 @@
 * Support mocha version 6
 * Breaking: focus on only support node.js environments (Please )
 * Breaking: Remove phantomJs support only supports environments which have require
-* Breaking: Remove Redundant top level mocha.suite
+* Potential Breaking: Remove Redundant top level mocha.suite
+* Drop the duration on messages if mocha returns undefined/null (for example skipped test) TeamCity will then use received timestamps to calculate duration
 
 TODO
 comparisonFailure service message attributes

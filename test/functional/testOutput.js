@@ -104,7 +104,7 @@ describe('Check TeamCity Output is correct', function () {
 		assert.isOk(/##teamcity\[testFinished/.test(rowToCheck));
 		assert.isOk(/name='Skipped Test @skip'/.test(rowToCheck));
 		assert.isOk(/flowId=/.test(rowToCheck));
-		assert.isOk(/duration=/.test(rowToCheck));
+		assert.isNotOk(/duration=/.test(rowToCheck));
 		assert.isOk(/]/.test(rowToCheck));
 	});
 

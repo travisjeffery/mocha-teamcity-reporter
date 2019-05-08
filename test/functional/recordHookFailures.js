@@ -12,7 +12,7 @@ describe('Check TeamCity Output is correct with recordHookFailures option', func
 			assert.isOk(teamCityStdout, 'has output');
 			assert.isOk(teamCityOutputArray, 'array of output is populated');
 			assert.lengthOf(teamCityOutputArray, 13);
-			assert.isEmpty(teamCityOutputArray[12])
+			assert.isEmpty(teamCityOutputArray[12]);
 		});
 
 		it('stderr output should not exist', function () {
