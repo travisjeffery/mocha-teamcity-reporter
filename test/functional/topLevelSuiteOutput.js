@@ -28,18 +28,28 @@ describe('Check TeamCity Output is correct with outer suite', function () {
 		});
 
 		it('Prefix suite end is present', function () {
-			const rowToCheck = teamCityOutputArray[11];
+			const rowToCheck = teamCityOutputArray[10];
 			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
-			assert.isOk(/name='mocha.suite'/.test(rowToCheck));
+			assert.isNotOk(/name='mocha.suite'/.test(rowToCheck));
 			assert.isOk(/duration=/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));
 		});
 
+		it('Skip Test Finished is ignored', function () {
+			const rowToCheck = teamCityOutputArray[7];
+			assert.isOk(/##teamcity\[testIgnored/.test(rowToCheck));
+			assert.isOk(/name='Skipped Test @skip'/.test(rowToCheck));
+			assert.isOk(/flowId=/.test(rowToCheck));
+			assert.isOk(/message='Skipped Test @skip'/.test(rowToCheck));
+			assert.isNotOk(/duration=/.test(rowToCheck));
+			assert.isOk(/]/.test(rowToCheck));
+		});
+
 		it('Suite Root Finished is OK', function () {
-			const rowToCheck = teamCityOutputArray[11];
+			const rowToCheck = teamCityOutputArray[10];
 			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
-			assert.isOk(/name='mocha.suite'/.test(rowToCheck));
+			assert.isNotOk(/name='mocha.suite'/.test(rowToCheck));
 			assert.isOk(/duration=/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));

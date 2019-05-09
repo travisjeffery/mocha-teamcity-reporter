@@ -7,13 +7,17 @@
 mocha-teamcity-reporter Teamcity reporter which makes it possible to display test results in real-time, makes test information 
 available on the Tests tab of the Build Results page.
 
-## Version 2.x changes
-* Breaking change, support node4.x+ only 
-* Support flowId's
-    * Why use flowIds? Flow tracking is necessary, for example, to distinguish separate processes running in parallel
-    * This defaults to process.pid, so it works with concurrent task runners (Gulp/Grunt etc)
-* other small bug fixes
-* Functional tests
+## Version 3.x changes
+* Change mocha to peer dependency
+* Support mocha version 6
+* Breaking: focus on only support node.js environments (Please let me know if your environment does not work)
+* Breaking: Remove phantomJs support, only supports environments which have require node.js style imports
+* Breaking: Remove Redundant top level mocha.suite
+* Drop the duration on messages if mocha returns undefined/null (for example skipped test) TeamCity will then use received timestamps to calculate duration
+* Support Show diff between expected and actual values
+
+## Mocha@6 notes
+* recordHookFailures option may not work as intended as mocha6 is now doing this itself
 
 ## Requirements
 * NodeJs 4+
@@ -78,6 +82,21 @@ Please note this will probably be made default in the next major version
 * Environment variable: RECORD_HOOK_FAILURES=true  
 * Reporter option: recordHookFailures=true
 
+
+### Show diff between expected and actual values
+This will allow a hyperlink to appear to compare actual vs expected
+Please note this requires the error thrown in mocha to have the properties actual and expected. For example an assertionError has this
+
+* Environment variable: ACTUAL_VS_EXPECTED=true  
+* Reporter option: actualVsExpected=true
+
+This will be shown in teamcity like this:
+```
+AssertionError [ERR_ASSERTION]: 2 == 1
+     at Context.<anonymous> (test/test_data/simple.js:11:11)
+ ======= Failed test run #10 ==========
+ Show diff between expected and actual values
+ ```
 
 ### Setting options
 

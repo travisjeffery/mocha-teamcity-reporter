@@ -1,3 +1,17 @@
+3.0.0 / 2019-01-21
+==================
+* Change mocha to peer dependency
+* Support mocha version 6
+* Breaking: focus on only support node.js environments (Please )
+* Breaking: Remove phantomJs support only supports environments which have require
+* Potential Breaking: Remove Redundant top level mocha.suite
+* Drop the duration on messages if mocha returns undefined/null (for example skipped test) TeamCity will then use received timestamps to calculate duration
+* Support Show diff between expected and actual values
+
+
+TODO
+comparisonFailure service message attributes
+
 2.5.2 / 2019-01-21
 ==================
 * Restrict mocha dependency to less than 6 due to compatibility issues
