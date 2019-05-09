@@ -79,6 +79,7 @@ describe('Check TeamCity Output is correct with actualVsExpected option', functi
 			assert.match(rowToCheck, /expected=/);
 			//check both key and value
 			assert.match(rowToCheck, /actual='2'/);
+			assert.match(rowToCheck, /type='comparisonFailure'/);
 			assert.match(rowToCheck, /expected='1'/);
 		});
 
