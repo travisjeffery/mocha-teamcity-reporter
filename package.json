@@ -11,9 +11,9 @@
   },
   "scripts": {
     "test": "mocha test/functional test/programmatic",
-    "test-parallel": "mocha --parallel test/functional test/programmatic",
+    "test-parallel": "mocha test/functional test/programmatic --parallel",
     "test-teamcity": "mocha test/functional test/programmatic --reporter lib/teamcity.js",
-    "test-teamcity-parallel": "mocha --parallel test/functional test/programmatic --reporter lib/teamcity.js",
+    "test-teamcity-parallel": "mocha test/functional test/programmatic --parallel --reporter lib/teamcity.js",
     "test-teamcity-example": "mocha test/example/exampleSimple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js",
     "lint-fix": "eslint --fix lib/*.js test/**/*.js",
