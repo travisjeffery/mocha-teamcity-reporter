@@ -1,9 +1,9 @@
 {
   "name": "mocha-teamcity-reporter",
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   },
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "teamcity reporter for mocha",
   "main": "./lib/teamcity.js",
   "directories": {
@@ -11,7 +11,9 @@
   },
   "scripts": {
     "test": "mocha test/functional test/programmatic",
+    "test-parallel": "mocha --parallel test/functional test/programmatic",
     "test-teamcity": "mocha test/functional test/programmatic --reporter lib/teamcity.js",
+    "test-teamcity-parallel": "mocha --parallel test/functional test/programmatic --reporter lib/teamcity.js",
     "test-teamcity-example": "mocha test/example/exampleSimple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js",
     "lint-fix": "eslint --fix lib/*.js test/**/*.js",
@@ -42,7 +44,7 @@
     "url": "https://github.com/travisjeffery/mocha-teamcity-reporter/issues"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^4.4.1"
+    "chai": "^4.2.0",
+    "eslint": "^7.4.0"
   }
 }

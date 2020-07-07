@@ -1,3 +1,9 @@
+4.0.0 / 2019-07-21
+==================
+* Drop support for older nodejs versions
+* Mocha 8 compatability
+
+
 3.0.0 / 2019-01-21
 ==================
 * Change mocha to peer dependency
