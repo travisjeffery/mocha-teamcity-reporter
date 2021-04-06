@@ -37,7 +37,7 @@ describe('Check TeamCity Output is correct with recordHookFailures option', func
 		it('Hook Test started is OK', function () {
 			const rowToCheck = teamCityOutputArray[1];
 			assert.match(rowToCheck, /##teamcity\[testStarted/);
-			assert.match(rowToCheck, /name='"before all" hook'/);
+			assert.match(rowToCheck, /name='"before all" hook/);
 			assert.match(rowToCheck, /flowId=/);
 			assert.match(rowToCheck, /]/);
 		});
@@ -175,5 +175,4 @@ describe('Check TeamCity Output is correct with recordHookFailures option', func
 		});
 		verifyResults();
 	});
-
 });
