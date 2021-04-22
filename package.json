@@ -14,8 +14,7 @@
     "test-teamcity": "mocha test/functional test/programmatic --reporter lib/teamcity.js",
     "test-teamcity-example": "mocha test/example/exampleSimple.js --reporter lib/teamcity.js",
     "lint": "eslint lib/*.js test/**/*.js",
-    "lint-fix": "eslint --fix lib/*.js test/**/*.js",
-    "prepare": "npm run test"
+    "lint-fix": "eslint --fix lib/*.js test/**/*.js"
   },
   "repository": {
     "type": "git",
