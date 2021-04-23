@@ -82,6 +82,33 @@ Please note this will probably be made default in the next major version
 * Environment variable: RECORD_HOOK_FAILURES=true  
 * Reporter option: recordHookFailures=true
 
+### Ignore hooks with title contains some text
+This option should be used in pair with recordHookFailures. It allows you to skip reporting of hooks containing some word. Including root hooks.
+* Environment variable: IGNORE_HOOK_WITH_NAME=HookNoReporting  
+* Reporter option: ignoreHookWithName=HookNoReporting
+
+Example:
+`mocha test --reporter mocha-teamcity-reporter --reporter-options recordHookFailures --reporter-options ignoreHookWithName=HookNoReporting`
+
+For root hooks defined the following way:
+```
+exports.mochaHooks = () => {
+	return {
+		beforeEach: [
+			function beforeEachRootHookNoReporting() {
+				assert.strictEqual(1, 1);
+			}
+		],
+		afterEach: [
+			function afterEachRoot() {
+				assert.strictEqual(1, 1);
+			},
+		]
+	};
+};
+```
+beforeEach hook beforeEachRootHookNoReporting() will not be reported as testStarted. But hook afterEachRoot() will be reported:
+
 
 ### Show diff between expected and actual values
 This will allow a hyperlink to appear to compare actual vs expected
