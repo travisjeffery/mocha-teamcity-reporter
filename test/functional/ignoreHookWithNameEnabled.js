@@ -55,7 +55,7 @@ describe('Check TeamCity Output is correct with ignoreHookWithName option', func
 		it('7 Before each hook testFailed', function () {
 			const rowToCheck = teamCityOutputArray[4];
 			assert.isOk(/##teamcity\[testFailed/.test(rowToCheck));
-			assert.isOk(/"before each" hook: beforeEachHookNoReporting for "Test Passing Test @pass"'/.test(rowToCheck));
+			assert.isOk(/"before each" hook: undefinedbeforeEachHookNoReporting for "Test Passing Test @pass"'/.test(rowToCheck));
 			assert.isOk(/message='Before each hook error fail'/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));
@@ -64,7 +64,7 @@ describe('Check TeamCity Output is correct with ignoreHookWithName option', func
 		it('8 After each hook testStarted', function () {
 			const rowToCheck = teamCityOutputArray[5];
 			assert.isOk(/##teamcity\[testStarted/.test(rowToCheck));
-			assert.isOk(/"after each" hook: afterEachHook/.test(rowToCheck));
+			assert.isOk(/"after each" hook: undefinedafterEachHook/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));
 		});
@@ -72,7 +72,7 @@ describe('Check TeamCity Output is correct with ignoreHookWithName option', func
 		it('8 After each hook testFailed', function () {
 			const rowToCheck = teamCityOutputArray[6];
 			assert.isOk(/##teamcity\[testFailed/.test(rowToCheck));
-			assert.isOk(/"after each" hook: afterEachHook for "Test Passing Test @pass"'/.test(rowToCheck));
+			assert.isOk(/"after each" hook: undefinedafterEachHook for "Test Passing Test @pass"'/.test(rowToCheck));
 			assert.isOk(/message='After each hook error fail'/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));
@@ -81,7 +81,7 @@ describe('Check TeamCity Output is correct with ignoreHookWithName option', func
 		it('10 After each hook testFinished', function () {
 			const rowToCheck = teamCityOutputArray[7];
 			assert.match(rowToCheck, /##teamcity\[testFinished/);
-			assert.match(rowToCheck, /"after each" hook: afterEachHook/);
+			assert.match(rowToCheck, /"after each" hook: undefinedafterEachHook/);
 			assert.match(rowToCheck, /flowId=/);
 			assert.match(rowToCheck, /duration=/);
 			assert.match(rowToCheck, /]/);

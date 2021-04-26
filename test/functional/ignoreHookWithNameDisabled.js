@@ -55,7 +55,7 @@ describe('Check TeamCity Output is correct with recordHookFailures but with no i
 		it('7 Before each hook testStarted', function () {
 			const rowToCheck = teamCityOutputArray[4];
 			assert.isOk(/##teamcity\[testStarted/.test(rowToCheck));
-			assert.isOk(/name='"before each" hook: beforeEachHookNoReporting/.test(rowToCheck));
+			assert.isOk(/name='"before each" hook: undefinedbeforeEachHookNoReporting/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));
 		});
@@ -63,7 +63,7 @@ describe('Check TeamCity Output is correct with recordHookFailures but with no i
 		it('8 Before each hook testFailed', function () {
 			const rowToCheck = teamCityOutputArray[5];
 			assert.isOk(/##teamcity\[testFailed/.test(rowToCheck));
-			assert.isOk(/"before each" hook: beforeEachHookNoReporting/.test(rowToCheck));
+			assert.isOk(/"before each" hook: undefinedbeforeEachHookNoReporting/.test(rowToCheck));
 			assert.isOk(/message='Before each hook error fail'/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));
@@ -72,7 +72,7 @@ describe('Check TeamCity Output is correct with recordHookFailures but with no i
 		it('9 Before all testFinished', function () {
 			const rowToCheck = teamCityOutputArray[6];
 			assert.match(rowToCheck, /##teamcity\[testFinished/);
-			assert.match(rowToCheck, /"before each" hook: beforeEachHookNoReporting/);
+			assert.match(rowToCheck, /"before each" hook: undefinedbeforeEachHookNoReporting/);
 			assert.match(rowToCheck, /flowId=/);
 			assert.match(rowToCheck, /duration=/);
 			assert.match(rowToCheck, /]/);
@@ -81,7 +81,7 @@ describe('Check TeamCity Output is correct with recordHookFailures but with no i
 		it('8 After each hook testStarted', function () {
 			const rowToCheck = teamCityOutputArray[7];
 			assert.isOk(/##teamcity\[testStarted/.test(rowToCheck));
-			assert.isOk(/"after each" hook: afterEachHook/.test(rowToCheck));
+			assert.isOk(/"after each" hook: undefinedafterEachHook/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));
 		});
@@ -89,7 +89,7 @@ describe('Check TeamCity Output is correct with recordHookFailures but with no i
 		it('9 After each hook testFailed', function () {
 			const rowToCheck = teamCityOutputArray[8];
 			assert.isOk(/##teamcity\[testFailed/.test(rowToCheck));
-			assert.isOk(/"after each" hook: afterEachHook for "Test Passing Test @pass"'/.test(rowToCheck));
+			assert.isOk(/"after each" hook: undefinedafterEachHook for "Test Passing Test @pass"'/.test(rowToCheck));
 			assert.isOk(/message='After each hook error fail'/.test(rowToCheck));
 			assert.isOk(/flowId=/.test(rowToCheck));
 			assert.isOk(/]/.test(rowToCheck));
@@ -98,7 +98,7 @@ describe('Check TeamCity Output is correct with recordHookFailures but with no i
 		it('10 After each hook testFinished', function () {
 			const rowToCheck = teamCityOutputArray[9];
 			assert.match(rowToCheck, /##teamcity\[testFinished/);
-			assert.match(rowToCheck, /"after each" hook: afterEachHook/);
+			assert.match(rowToCheck, /"after each" hook: undefinedafterEachHook/);
 			assert.match(rowToCheck, /flowId=/);
 			assert.match(rowToCheck, /duration=/);
 			assert.match(rowToCheck, /]/);
