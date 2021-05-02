@@ -9,7 +9,8 @@ describe('Hook Test Top Describe Fail', function () {
 		assert.strictEqual(1, 1);
 	});
 
-	beforeEach(function beforeEachHookNoReporting() {
+	// Name of the function is an additional check for case when ignoreHookWithName is undefined
+	beforeEach(function undefinedbeforeEachHookNoReporting() {
 		throw new Error('Before each hook error fail');
 	});
 
@@ -17,7 +18,8 @@ describe('Hook Test Top Describe Fail', function () {
 		assert.strictEqual(1, 1);
 	});
 
-	afterEach(function afterEachHook() {
+	// Name of the function is an additional check for case when ignoreHookWithName is undefined
+	afterEach(function undefinedafterEachHook() {
 		throw new Error('After each hook error fail');
 	});
 
