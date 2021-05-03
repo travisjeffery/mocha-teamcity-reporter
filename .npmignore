@@ -6,6 +6,7 @@ coverage
 .travis.yml
 .jenkins.yml
 .codeclimate.yml
+appveyor.yml
 
 #linters
 .jscsrc
@@ -18,3 +19,7 @@ coverage
 
 #github settings
 .github
+
+#custom scripts
+testMochaVersions.ps1
+testMochaVersions.sh
