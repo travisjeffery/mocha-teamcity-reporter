@@ -22,7 +22,8 @@ available on the Tests tab of the Build Results page.
 
 ## Requirements
 
-* NodeJs 4+
+* NodeJs 6+
+* Mocha 6+
 * Web Browser supporting ES5
 
 ## To Install
