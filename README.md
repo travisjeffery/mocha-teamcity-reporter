@@ -3,7 +3,7 @@
 
 # mocha-teamcity-reporter #
 
-mocha-teamcity-reporter Teamcity reporter which makes it possible to display test results in real-time, makes test information
+`mocha-teamcity-reporter` Teamcity reporter which makes it possible to display test results in real-time, makes test information
 available on the Tests tab of the Build Results page.
 
 ## Version 4.x changes
@@ -11,6 +11,9 @@ available on the Tests tab of the Build Results page.
 * Breaking: Only supported on node.js 6 and above
 * Breaking: Only Mocha version 6 and above is now supported
   * Please remain on `mocha-teamcity-reporter@3` if this is an issue
+* New reporter option `ignoreHookWithName` to skip reporting for hooks with title containing some word (@DJ-Glock)
+* Implement 'hook end' event (@DJ-GLock)
+* General maintenance and tidy up (@DJ-Glock)
 
 ## Mocha@6 notes
 
