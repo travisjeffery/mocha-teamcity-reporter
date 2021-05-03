@@ -4,7 +4,7 @@
 * Breaking: Only supported on node.js 6 and above
 * Breaking: Only Mocha version 6 and above is now supported
   * Please remain on `mocha-teamcity-reporter@3` if this is an issue
-* New reporter option was added to skip reporting for hooks with title containing some word (@DJ-Glock)
+* New reporter option `ignoreHookWithName` to skip reporting for hooks with title containing some word (@DJ-Glock)
 * Implement 'hook end' event (@DJ-GLock)
 * General maintenance and tidy up (@DJ-Glock)
 
