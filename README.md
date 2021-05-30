@@ -149,6 +149,14 @@ AssertionError [ERR_ASSERTION]: 2 == 1
 
 `MOCHA_TEAMCITY_TOP_LEVEL_SUITE='top-level-suite-name' mocha test --reporter mocha-teamcity-reporter`
 
+### Multiple reporters
+
+This is not supported out of the box by this plugin but have a look at the following:
+
+* Using <https://github.com/stanleyhlng/mocha-multi-reporters>
+* <https://stackoverflow.com/questions/11354203/is-it-possible-to-get-the-raw-build-log-from-a-teamcity-build/67635511#67635511>
+* Or view <https://github.com/travisjeffery/mocha-teamcity-reporter/issues/60> for more details
+
 ## View on live Teamcity
 
 * Project can be viewed at
