@@ -1,3 +1,9 @@
+4.1.0 / 2021-05-30
+==================
+
+* Solve # Issue 61 "Failed tests appears as successful in TeamCity" by PR #63 (@DJ-Glock)
+  * Solved by adding postfix _hook for flowId for hooks. FlowIds will never intersect.
+
 4.0.0 / 2021-05-03
 ==================
 

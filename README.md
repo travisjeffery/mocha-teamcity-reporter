@@ -13,6 +13,7 @@ available on the Tests tab of the Build Results page.
 * Breaking: Only Mocha version 6 and above is now supported
   * Please remain on `mocha-teamcity-reporter@3` if this is an issue
 * New reporter option `ignoreHookWithName` to skip reporting for hooks with title containing some word (@DJ-Glock)
+* Added postfix _hook for flowId for hooks to ensure flowIds will never intersect.
 * Implement 'hook end' event (@DJ-GLock)
 * General maintenance and tidy up (@DJ-Glock)
 
