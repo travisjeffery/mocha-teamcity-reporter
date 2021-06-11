@@ -6,6 +6,10 @@ const  path = require('path');
 const {getTestDataPath } = require('../testHelpers');
 const testDataDir = getTestDataPath();
 
+const {
+	EVENT_RUN_END
+  } = Mocha.Runner.constants;
+
 //Assumes running from root project dir
 describe('Can use reporter programmatically', function () {
 	let mocha;
@@ -27,7 +31,7 @@ describe('Can use reporter programmatically', function () {
 		it('programmatic reporter can get to exit', function (done) {
 			// Run the tests.
 			const mochaRunner = mocha.run();
-			mochaRunner.on('end', function () {
+			mochaRunner.on(EVENT_RUN_END, function () {
 					done();
 			});
 		});
