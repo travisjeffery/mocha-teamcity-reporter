@@ -11,8 +11,8 @@ describe('Check TeamCity Output is correct with stdError option', function () {
 		it('stdout output should exist', function () {
 			assert.isOk(teamCityStdout, 'has output');
 			assert.isOk(teamCityOutputArray, 'array of output is populated');
-			assert.isOk(teamCityOutputArray.length >= 8, 'at least 8 lines of output');
-			assert.lengthOf(teamCityOutputArray, 8);
+			assert.isOk(teamCityOutputArray.length >= 9, 'at least 9 lines of output');
+			assert.lengthOf(teamCityOutputArray, 9);
 		});
 
 		it('stderr output should exist', function () {
@@ -25,7 +25,7 @@ describe('Check TeamCity Output is correct with stdError option', function () {
 		it('stdout output should exist', function () {
 			assert.isOk(teamCityStdout);
 			assert.isOk(teamCityOutputArray);
-			assert.isOk(teamCityOutputArray.length >= 8);
+			assert.isOk(teamCityOutputArray.length >= 9);
 		});
 
 		it('Suite started is OK', function () {
@@ -96,13 +96,16 @@ describe('Check TeamCity Output is correct with stdError option', function () {
 		});
 
 		it('Skip Test Finished is OK', function () {
-			teamCityOutputArray.forEach((rowToCheck) => {
-				assert.isNotOk(/##teamcity\[testFinished name='Skipped Test @skip/.test(rowToCheck));
-			});
+			const rowToCheck = teamCityOutputArray[6];
+			assert.isOk(/##teamcity\[testFinished/.test(rowToCheck));
+			assert.isOk(/name='Skipped Test @skip'/.test(rowToCheck));
+			assert.isOk(/flowId=/.test(rowToCheck));
+			assert.isNotOk(/duration=/.test(rowToCheck));
+			assert.isOk(/]/.test(rowToCheck));
 		});
 
 		it('Suite Finished is OK', function () {
-			const rowToCheck = teamCityOutputArray[6];
+			const rowToCheck = teamCityOutputArray[7];
 			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
 			assert.isOk(/name='Top Describe'/.test(rowToCheck));
 			assert.isOk(/duration=/.test(rowToCheck));
@@ -111,7 +114,7 @@ describe('Check TeamCity Output is correct with stdError option', function () {
 		});
 
 		it('Suite Root Finished is OK', function () {
-			const rowToCheck = teamCityOutputArray[6];
+			const rowToCheck = teamCityOutputArray[7];
 			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
 			assert.isNotOk(/name='mocha.suite'/.test(rowToCheck));
 			assert.isOk(/duration=/.test(rowToCheck));

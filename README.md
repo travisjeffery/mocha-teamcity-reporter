@@ -89,6 +89,14 @@ Please note this will probably be made default in the next major version
 * Environment variable: RECORD_HOOK_FAILURES=true  
 * Reporter option: recordHookFailures=true
 
+### Display Ignored tests as ignored
+
+Display skip tests as ignored
+
+* Environment variable: DISPLAY_IGNORED_AS_IGNORED=true  
+* Reporter option: displayIgnoredAsIgnored=true
+
+
 ### Ignore hooks with title contains some text
 
 This option should be used in pair with recordHookFailures. It allows you to skip reporting of hooks containing some word. Including root hooks.

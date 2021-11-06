@@ -29,7 +29,7 @@ describe('Check TeamCity Output is correct', function () {
 		assert.isOk(teamCityStdout);
 		assert.isOk(teamCityOutputArray);
 		assert.isOk(teamCityStderr.length === 0);
-		assert.isOk(teamCityOutputArray.length >= 9);
+		assert.isOk(teamCityOutputArray.length >= 10);
 	});
 
 	it('Suite started is OK', function () {
@@ -100,13 +100,16 @@ describe('Check TeamCity Output is correct', function () {
 	});
 
 	it('Skip Test Finished is OK', function () {
-		teamCityOutputArray.forEach((rowToCheck) => {
-			assert.isNotOk(/##teamcity\[testFinished name='Skipped Test @skip/.test(rowToCheck));
-		});
+		const rowToCheck = teamCityOutputArray[7];
+		assert.isOk(/##teamcity\[testFinished/.test(rowToCheck));
+		assert.isOk(/name='Skipped Test @skip'/.test(rowToCheck));
+		assert.isOk(/flowId=/.test(rowToCheck));
+		assert.isNotOk(/duration=/.test(rowToCheck));
+		assert.isOk(/]/.test(rowToCheck));
 	});
 
 	it('Suite Finished is OK', function () {
-		const rowToCheck = teamCityOutputArray[7];
+		const rowToCheck = teamCityOutputArray[8];
 		assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
 		assert.isOk(/name='Top Describe'/.test(rowToCheck));
 		assert.isOk(/duration=/.test(rowToCheck));
@@ -115,8 +118,8 @@ describe('Check TeamCity Output is correct', function () {
 	});
 
 	it('Suite Root Finished is OK', function () {
-		const rowToCheck = teamCityOutputArray[7];
-		assert.isEmpty(teamCityOutputArray[8], 'Last row should be empty');
+		const rowToCheck = teamCityOutputArray[8];
+		assert.isEmpty(teamCityOutputArray[9], 'Last row should be empty');
 		assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
 		assert.isNotOk(/name='mocha.suite'/.test(rowToCheck));
 		assert.isOk(/duration=/.test(rowToCheck));
