@@ -12,7 +12,7 @@ describe('Check TeamCity Output is correct with outer suite', function () {
 		it('stdout output should exist', function () {
 			assert.isOk(teamCityStdout, 'has output');
 			assert.isOk(teamCityOutputArray, 'array of output is populated');
-			assert.isOk(teamCityOutputArray.length >= 10, 'at least 10 lines of output');
+			assert.isOk(teamCityOutputArray.length >= 9, 'at least 9 lines of output');
 		});
 
 		it('stderr output should not exist', function () {
@@ -28,7 +28,7 @@ describe('Check TeamCity Output is correct with outer suite', function () {
 		});
 
 		it('Prefix suite end is present', function () {
-			const rowToCheck = teamCityOutputArray[10];
+			const rowToCheck = teamCityOutputArray[9];
 			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
 			assert.isNotOk(/name='mocha.suite'/.test(rowToCheck));
 			assert.isOk(/duration=/.test(rowToCheck));
@@ -47,7 +47,7 @@ describe('Check TeamCity Output is correct with outer suite', function () {
 		});
 
 		it('Suite Root Finished is OK', function () {
-			const rowToCheck = teamCityOutputArray[10];
+			const rowToCheck = teamCityOutputArray[9];
 			assert.isOk(/##teamcity\[testSuiteFinished/.test(rowToCheck));
 			assert.isNotOk(/name='mocha.suite'/.test(rowToCheck));
 			assert.isOk(/duration=/.test(rowToCheck));
