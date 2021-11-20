@@ -1,3 +1,9 @@
+4.2.0 / 2021-11-21
+==================
+
+* Solve # Issue 65 "Pending tests are displayed as Passed in teamcity UI" by PR #66 (@fernyb )
+  * Solved by producing correct output as per teamcity documentation, functionality can be disabled by reporter option `displayIgnoredAsIgnored`
+
 4.1.0 / 2021-05-30
 ==================
 
