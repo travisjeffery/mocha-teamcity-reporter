@@ -10,17 +10,18 @@ describe('Display Failed Hook As Failed Test - On', () => {
 
   function verifyResults() {
     it('displays failed hook as failed test', () => {
-      assert.isOk(teamCityStdout, 'has output');
 			`
 			teamcity[testSuiteStarted name='Before each hook Failure'
-			##teamcity[testIgnored name='should _-$@#^&*be hello' message='should _-$@#^&*be hello'
+			##teamcity[testIgnored name='should _-$@#^&*be hello' message='should _-$@#^&*be hello' 
 			##teamcity[testStarted name='"before each" hook for "should _-$@#^&*be hello"' captureStandardOutput='true'
 			##teamcity[testFailed name='"before each" hook for "should _-$@#^&*be hello"'
 			##teamcity[testFinished name='"before each" hook for "should _-$@#^&*be hello"'
 			##teamcity[testSuiteFinished name='Before each hook Failure'
 			`.split('\n').forEach((message) => {
-				assert.isOk(teamCityStdout.includes(message.trim()));
+				if (message === '') return;
+				assert.isOk(teamCityStdout.includes(message.trim()), `${message}, \n\n${teamCityStdout}`);
 			});
+			
 		});
 
 		it('before each hook fail is in correct format', () => {
@@ -136,7 +137,7 @@ describe('Display Failed Hook As Failed Test - On', () => {
 				'--reporter',
 				'lib/teamcity',
 				'--reporter-options',
-				'recordHookFailures=true,displayIgnoredAsIgnored=true,displayFailedHookAsFailedTest=true',
+				'"recordHookFailures=true,displayIgnoredAsIgnored=true,displayFailedHookAsFailedTest=true"',
 			], (err, stdout, stderr) => {
 				teamCityStdout = stdout;
 				teamCityOutputArray = stdout.split('\n');
